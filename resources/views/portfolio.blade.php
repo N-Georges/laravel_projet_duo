@@ -168,7 +168,7 @@
                 </div><!-- /.col-lg-fifth  -->
                 <div class="col-lg-fifth col-md-3 col-sm-4 col-xs-6" data-groups='["identity"]'>
                     <a class="portfolio-link" href="#">
-                        <img src="{{ asset('img/portfolio-5.jpg') }}alt="" class="img-carousel">
+                        <img src="{{ asset('img/portfolio-5.jpg') }}"alt="" class="img-carousel">
                         <div class="portfolio-info">
                             <div class="portfolio-info-top">" 
                                 <h3>Business Perfect item</h3>
@@ -194,7 +194,7 @@
                 </div><!-- /.col-lg-fifth  -->
                 <div class="col-lg-fifth col-md-3 col-sm-4 col-xs-6" data-groups='["illustrations"]'>
                     <a class="portfolio-link" href="#">
-                        <img src="img/portfolio-3.jpg" alt="" class="img-carousel">
+                        <img src="{{ asset('img/portfolio-3.jpg')}}" alt="" class="img-carousel">
                         <div class="portfolio-info">
                             <div class="portfolio-info-top">
                                 <h3>Business Perfect item</h3>
