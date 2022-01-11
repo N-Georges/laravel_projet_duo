@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\FrontController;
 use App\Http\Controllers\PortfolioController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,14 +16,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
 
-Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+//Front
+Route::get('/', [FrontController::class, 'home'])->name('home');
+Route::get('/blog', [FrontController::class, 'blog'])->name('blog');
+Route::get('/portfolio', [FrontController::class, 'portfolio'])->name('portfolio');
+Route::get('/contact', [FrontController::class, 'contact'])->name('contact');
+Route::get('/admin/dashboard', [FrontController::class, 'dashboard'])->name('dashboard');
 
-Route::get('/portfolio',[PortfolioController::class, 'index'])->name('portfolio');
 
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
+//Back
+
+Route::get('/admin/dashboard/blog', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/admin/dashboard/portfolio', [PortfolioController::class, 'index'])->name('portfolio.index');
