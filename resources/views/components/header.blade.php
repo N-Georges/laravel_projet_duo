@@ -24,6 +24,9 @@
                     <li class="{{ (request()->is('contact')) ? 'active' : '' }}">
                         <a href="{{ route('contact') }}">Contact</a>
                     </li> 
+                    <li >
+                        <a href="{{ route('dashboard') }}">Admin</a>
+                    </li> 
                 </ul><!-- /.navbar-nav -->
             </div><!-- /.navbar-collapse -->
             
