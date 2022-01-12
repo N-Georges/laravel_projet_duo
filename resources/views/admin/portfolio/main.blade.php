@@ -178,7 +178,7 @@
             </header>
             <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-200">
                 <div class="container mx-auto px-6 py-8">
-                    <h3 class="text-gray-700 text-3xl font-medium">Blog</h3>
+                    <h3 class="text-gray-700 text-3xl font-medium">Portfolio</h3>
                     <div class="mt-4">
                         <div class="flex flex-wrap -mx-6">
                             <div class="w-full px-6 sm:w-1/2 xl:w-1/3">
@@ -210,7 +210,6 @@
                                     <div class="mx-5">
                                         <h4 class="text-2xl font-semibold text-gray-700">8,282</h4>
                                         <a href="#" class="text-gray-500">Create article</a>
-                                        
                                     </div>
                                 </div>
                             </div>

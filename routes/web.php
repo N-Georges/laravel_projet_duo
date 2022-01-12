@@ -27,4 +27,6 @@ Route::get('/admin/dashboard', [FrontController::class, 'dashboard'])->name('das
 
 //Back
 
-Route::get('/admin/blog', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/admin/dashboard/blog', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/admin/dashboard/portfolio', [PortfolioController::class, 'index'])->name('portfolio.index');
+
