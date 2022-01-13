@@ -10,8 +10,8 @@ class BlogController extends Controller
     public function index()
     {
 
-        
-        return view('admin.blog.main');
+        $article = Blog::all();
+        return view('admin.blog.main', compact('article'));
 
     }
 
