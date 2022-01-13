@@ -209,7 +209,7 @@
     
                                     <div class="mx-5">
                                         <h4 class="text-2xl font-semibold text-gray-700">8,282</h4>
-                                        <a href="#" class="text-gray-500">Create article</a>
+                                        <a href="{{ route('blog.create')}}" class="text-gray-500">Create article</a>
                                         
                                     </div>
                                 </div>

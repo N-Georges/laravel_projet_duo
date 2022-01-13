@@ -14,4 +14,19 @@ class BlogController extends Controller
         return view('admin.blog.main');
 
     }
+
+    public function create() 
+    {
+        return view('admin.blog.create');
+    }
+
+    public function store(Request $request)
+    {
+        $blog = new Blog();
+        $blog -> img = $request->img;
+        $blog -> titre = $request->titre;
+        $blog -> descri = $request->descri;
+        $blog -> save();
+        return Redirect()->route('blog');
+    }
 }

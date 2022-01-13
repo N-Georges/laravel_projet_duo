@@ -29,4 +29,7 @@ Route::get('/admin/dashboard', [FrontController::class, 'dashboard'])->name('das
 
 Route::get('/admin/dashboard/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/admin/dashboard/portfolio', [PortfolioController::class, 'index'])->name('portfolio.index');
+Route::get('/admin/dashboard/blog/create', [BlogController::class, 'create'])->name('blog.create');
+Route::post('/admin/dashboard/blog/store', [BlogController::class, 'store'])->name('blog.store');
+
 
