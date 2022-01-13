@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\FrontController;
-// use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\PortfolioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,7 +29,11 @@ Route::get('/admin/dashboard', [FrontController::class, 'dashboard'])->name('das
 
 Route::get('/admin/dashboard/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/admin/dashboard/portfolio', [PortfolioController::class, 'index'])->name('portfolio.index');
+// CRUD CREATE
 Route::get('/admin/dashboard/blog/create', [BlogController::class, 'create'])->name('blog.create');
 Route::post('/admin/dashboard/blog/store', [BlogController::class, 'store'])->name('blog.store');
+
+// CRUD DELETE
+Route::delete('/admin/dashboard/blog/{id}/delete', [BlogController::class, 'destroy'])->name('blog.destroy');
 
 

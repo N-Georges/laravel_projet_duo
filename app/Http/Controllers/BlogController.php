@@ -29,4 +29,11 @@ class BlogController extends Controller
         $blog -> save();
         return Redirect()->route('blog');
     }
+
+
+    public function destroy(Blog $id)
+    {
+        $id->delete();
+        return Redirect()->back();
+    }
 }
