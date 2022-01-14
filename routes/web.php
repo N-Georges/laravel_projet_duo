@@ -33,7 +33,11 @@ Route::get('/admin/dashboard/portfolio', [PortfolioController::class, 'index'])-
 Route::get('/admin/dashboard/blog/create', [BlogController::class, 'create'])->name('blog.create');
 Route::post('/admin/dashboard/blog/store', [BlogController::class, 'store'])->name('blog.store');
 
+Route::get('/admin/dashboard/portfolio/create', [PortfolioController::class, 'create'])->name('portfolio.create');
+Route::post('/admin/dashboard/portfolio/store', [PortfolioController::class, 'store'])->name('portfolio.store');
+
 // CRUD DELETE
 Route::delete('/admin/dashboard/blog/{id}/delete', [BlogController::class, 'destroy'])->name('blog.destroy');
+Route::delete('/admin/dashboard/portfolio/{id}/delete', [PortfolioController::class, 'destroy'])->name('portfolio.destroy');
 
 
