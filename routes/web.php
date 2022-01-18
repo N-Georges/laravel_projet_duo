@@ -41,6 +41,11 @@ Route::post('/admin/dashboard/portfolio/store', [PortfolioController::class, 'st
 Route::delete('/admin/dashboard/blog/{id}/delete', [BlogController::class, 'destroy'])->name('blog.destroy');
 Route::delete('/admin/dashboard/portfolio/{id}/delete', [PortfolioController::class, 'destroy'])->name('portfolio.destroy');
 
+// CRUD EDIT
+Route::get('/admin/portfolio/{id}/edit', [PortfolioController::class, 'edit'])->name('portfolio.edit');
+Route::put('/admin/portfolio/{id}/update', [PortfolioController::class, 'update'])->name('portfolio.update');
+
+
 //CRUD SHOW
 Route::get('/admin/dashbord/blog/{id}/show', [BlogController::class, 'show'])->name('blog.show');
 Route::get('/admin/dashbord/portfolio/{id}/show', [PortfolioController::class, 'show'])->name('portfolio.show');
