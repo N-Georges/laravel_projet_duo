@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\FrontController;
-// use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\PortfolioController;
 use Illuminate\Support\Facades\Route;
 
 /*
