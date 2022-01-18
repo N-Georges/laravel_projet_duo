@@ -3,6 +3,7 @@
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\PortfolioController;
+use App\Models\Blog;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,15 +30,20 @@ Route::get('/admin/dashboard', [FrontController::class, 'dashboard'])->name('das
 
 Route::get('/admin/dashboard/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/admin/dashboard/portfolio', [PortfolioController::class, 'index'])->name('portfolio.index');
-// CRUD CREATE
+// CRUD CREATE BLOG
 Route::get('/admin/dashboard/blog/create', [BlogController::class, 'create'])->name('blog.create');
 Route::post('/admin/dashboard/blog/store', [BlogController::class, 'store'])->name('blog.store');
-
+// CRUD CREATE BLOG
 Route::get('/admin/dashboard/portfolio/create', [PortfolioController::class, 'create'])->name('portfolio.create');
 Route::post('/admin/dashboard/portfolio/store', [PortfolioController::class, 'store'])->name('portfolio.store');
 
 // CRUD DELETE
 Route::delete('/admin/dashboard/blog/{id}/delete', [BlogController::class, 'destroy'])->name('blog.destroy');
 Route::delete('/admin/dashboard/portfolio/{id}/delete', [PortfolioController::class, 'destroy'])->name('portfolio.destroy');
+
+//CRUD SHOW
+Route::get('/admin/dashbord/blog/{id}/show', [BlogController::class, 'show'])->name('blog.show');
+Route::get('/admin/dashbord/portfolio/{id}/show', [PortfolioController::class, 'show'])->name('portfolio.show');
+
 
 

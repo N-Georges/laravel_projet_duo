@@ -36,4 +36,9 @@ class BlogController extends Controller
         $id->delete();
         return Redirect()->back();
     }
+
+    public function show(Blog $id)
+    {
+        return view('show', compact('id'));
+    }
 }

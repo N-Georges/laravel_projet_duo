@@ -33,4 +33,9 @@ class PortfolioController extends Controller
         $id->delete();
         return Redirect()->back();
     }
+
+    public function show(Portfolio $id)
+    {
+        return view('showportfolio', compact('id'));
+    }
 }

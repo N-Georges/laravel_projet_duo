@@ -326,6 +326,7 @@
                                                     @method('DELETE')
                                                     <button href="#" class="text-indigo-600 hover:text-indigo-900">Delete</button>
                                                 </form>
+                                                <a href="{{ route('portfolio.show', $item->id) }}" class="text-indigo-600 hover:text-indigo-900">Show</a>
                                             </td>
                                         </tr>
                                             

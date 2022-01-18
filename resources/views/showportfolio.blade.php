@@ -1,3 +1,24 @@
+{{-- @extends('layouts.app')
+@section('content')
+{{-- @dump($id) --}}
+{{-- <p> Titre: {{$id->titre}}</p>
+<p> img: {{$id->img}}</p>
+<p> descri: {{$id->descri }}</p>
+    
+@endsection --}} 
+
+{{-- @extends('layouts.app') --}}
+{{-- @section('content')
+{{-- @dump($id) --}}
+
+{{-- <div class="m-20">
+    <p> Titre: {{$id->titre}}</p>
+    <p> img: {{$id->img}}</p>
+    <p> descri: {{$id->descri }}</p>
+
+</div> --}} 
+    
+
 @extends('layouts.app')
 
 @section('content')
@@ -178,7 +199,7 @@
             </header>
             <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-200">
                 <div class="container mx-auto px-6 py-8">
-                    <h3 class="text-gray-700 text-3xl font-medium">Blog</h3>
+                    <h3 class="text-gray-700 text-3xl font-medium">Portfolio</h3>
                     <div class="mt-4">
                         <div class="flex flex-wrap -mx-6">
                             <div class="w-full px-6 sm:w-1/2 xl:w-1/3">
@@ -271,70 +292,18 @@
                             <div
                                 class="align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200">
                                 <table class="min-w-full">
-                                    <thead>
-                                        
-                                        <tr>
-                                            <th
-                                                class="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-                                                Images</th>
-                                            <th
-                                                class="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-                                                Titre</th>
-                                            <th
-                                                class="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-                                                Description</th>
-                                            
-                                            <th class="px-6 py-3 border-b border-gray-200 bg-gray-50"></th>
-                                            <th class="px-6 py-3 border-b border-gray-200 bg-gray-50"></th>
-                                        </tr>
-                                    </thead>
+                                    
     
                                     <tbody class="bg-white">
 
-                                        @forelse ($article as $item)
-                                        <tr>
-                                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                                                <div class="flex items-center">
-                                                    <div class="flex-shrink-0 h-10 w-10">
-                                                        <img class="h-10 w-10 rounded-full"
-                                                        src={{ asset("img/" . $item->img) }}
-                                                            alt="">
-                                                    </div>
-                                                </div>
-                                            </td>
-    
-                                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                                                <div class="text-sm leading-5 text-gray-900">{{$item->titre}}</div>
-                                            </td>
-    
-                                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                                                <span
-                                                    class="text-sm leading-5 text-gray-900">{{$item->descri}}</span>
-                                            </td>
-    
-    
-                                            <td
-                                                class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
-                                                <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
-                                            </td>
-                                            <td
-                            
-                                                class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
-                                                <form action="{{ route('blog.destroy', $item->id) }}" method="POST">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button  class="text-red-600 hover:text-indigo-900">Delete</button>
-                                                </form>
-                                                <a href="{{ route('blog.show', $item->id) }}" class="text-indigo-600 hover:text-indigo-900">Show</a>
-                                            </td>
+                                        <div class="m-20">
+                                            <p> Titre: {{$id->titre}}</p>
+                                            <p> img: {{$id->img}}</p>
+                                            <p> descri: {{$id->descri }}</p>
+                                        
+                                        </div>
 
-
-                                            
-                                        </tr>
-                                            
-                                        @empty
-                                            
-                                        @endforelse
+                                        
                                     </tbody>
                                 </table>
                             </div>
@@ -346,3 +315,4 @@
     </div>
 </div>
 @endsection
+{{-- @endsection --}}
