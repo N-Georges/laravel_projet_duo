@@ -43,3 +43,6 @@ Route::delete('/admin/dashboard/portfolio/{id}/delete', [PortfolioController::cl
 // EDIT - UPDATE
 Route::get('/admin/blog/{id}/edit', [BlogController::class, 'edit'])->name('blog.edit');
 Route::put('/admin/blog/{id}/update', [BlogController::class, 'update'])->name('blog.update');
+
+Route::get('/admin/portfolio/{id}/edit', [PortfolioController::class, 'edit'])->name('portfolio.edit');
+Route::put('/admin/portfolio/{id}/update', [PortfolioController::class, 'update'])->name('portfolio.update');
