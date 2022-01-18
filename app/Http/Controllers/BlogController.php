@@ -41,4 +41,22 @@ class BlogController extends Controller
     {
         return view('show', compact('id'));
     }
+    public function edit(Blog $id)
+    {
+        $blog = $id;
+        return view('admin.blog.edit', compact('blog'));
+    }
+
+    public function update(Blog $id, Request $request)
+    {
+        $blog = $id;
+        $blog->img = $request->img;
+        $blog->titre = $request->titre;
+        $blog->descri = $request->descri;
+        $blog->save();
+
+        return redirect()->route('blog.index');
+        return redirect('blog.index' . $blog->id);
+
+    }
 }
