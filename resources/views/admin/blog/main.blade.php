@@ -315,10 +315,10 @@
     
                                             <td
                                                 class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
-                                                <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                                                <a href="{{ route('blog.edit', $item->id) }}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                                                
                                             </td>
                                             <td
-                            
                                                 class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
                                                 <form action="{{ route('blog.destroy', $item->id) }}" method="POST">
                                                     @csrf
