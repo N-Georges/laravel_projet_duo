@@ -40,4 +40,6 @@ Route::post('/admin/dashboard/portfolio/store', [PortfolioController::class, 'st
 Route::delete('/admin/dashboard/blog/{id}/delete', [BlogController::class, 'destroy'])->name('blog.destroy');
 Route::delete('/admin/dashboard/portfolio/{id}/delete', [PortfolioController::class, 'destroy'])->name('portfolio.destroy');
 
-
+// EDIT - UPDATE
+Route::get('/admin/blog/{id}/edit', [BlogController::class, 'edit'])->name('blog.edit');
+Route::put('/admin/blog/{id}/update', [BlogController::class, 'update'])->name('blog.update');
